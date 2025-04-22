@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'paperlogy';
+    font-weight: 100;
+    font-style: normal;
+    src: url(../font/Paperlogy-1Thin.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'paperlogy';
+    font-weight: 200;
+    font-style: normal;
+    src: url(../font/Paperlogy-2ExtraLight.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'paperlogy';
+    font-weight: 300;
+    font-style: normal;
+    src: url(../font/Paperlogy-3Light.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'paperlogy';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/Paperlogy-4Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'paperlogy';
+    font-weight: 500;
+    font-style: normal;
+    src: url(../font/Paperlogy-5Medium.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'paperlogy';
+    font-weight: 600;
+    font-style: normal;
+    src: url(../font/Paperlogy-6SemiBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'paperlogy';
+    font-weight: bold;
+    font-style: normal;
+    src: url(../font/Paperlogy-7Bold.woff) format('woff');
+}
+
+
+@font-face {
+    font-family: 'paperlogy';
+    font-weight: bold;
+    font-style: normal;
+    src: url(../font/Paperlogy-8ExtraBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'paperlogy';
+    font-weight: 900;
+    font-style: normal;
+    src: url(../font/Paperlogy-9Black.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'freesentation';
+    font-weight: 100;
+    font-style: normal;
+    src: url(../font/Freesentation-1Thin.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'freesentation';
+    font-weight: 200;
+    font-style: normal;
+    src: url(../font/Freesentation-2ExtraLight.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'freesentation';
+    font-weight: 300;
+    font-style: normal;
+    src: url(../font/Freesentation-3Light.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'freesentation';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/Freesentation-4Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'freesentation';
+    font-weight: 500;
+    font-style: normal;
+    src: url(../font/Freesentation-5Medium.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'freesentation';
+    font-weight: 600;
+    font-style: normal;
+    src: url(../font/Freesentation-6SemiBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'freesentation';
+    font-weight: bold;
+    font-style: normal;
+    src: url(../font/Freesentation-7Bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'freesentation';
+    font-weight: bold;
+    font-style: normal;
+    src: url(../font/Freesentation-8ExtraBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'freesentation';
+    font-weight: 900;
+    font-style: normal;
+    src: url(../font/Freesentation-9Black.woff) format('woff');
+}
+
+
+@font-face {
+    font-family: 'lovingu';
+    font-weight: normal;
+    font-style: normal;
+    src: url(../font/Cafe24Lovingu.woff) format('woff');
+}

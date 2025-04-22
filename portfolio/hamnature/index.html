@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- w3 school -->
+    <meta name="description" content="건강하고 행복한 햄스터생활을 위한 모든것을 제공하는 햄스터 전문 웹사이트">
+    <meta name="keywords" content="햄스터용품, 자연주의햄스터, 유기햄스터, 햄스터 커뮤니티, AI햄스터맞춤">
+    <meta name="author" content="rosie jeon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자연주의 햄스터 사이트</title>
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/4cc28289f9.js" crossorigin="anonymous"></script>
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- 내 자바스크립트 -->
+    <script src="js/main.js"></script>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main_style.css">
+    <link rel="stylesheet" href="css/font.css">
+    <!-- 스와이퍼 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="con_inner">
+                <h1><a href="#">로고<i data-lucide="shopping-cart"></i></a></h1>
+                
+                <div class="gnb">
+                    <ul>
+                        <li><a href="#">쇼핑</a></li>
+                        <li><a href="#">커뮤니티</a></li>
+                        <li><a href="#">가족찾기</a></li>
+                        <li><a href="#">가이드</a></li>
+                        <li><a href="#">건강점검</a></li>
+                        <li><a href="#">영상</a></li>
+                    </ul>
+                </div>
+                <div class="gnb_right">
+                    <ul>
+                        <li><a href="#"><img src="img/header_search.png" alt="search"></a></li>
+                        <li><a href=""><img src="img/header_cart.png" alt="cart"></a></li>
+                        <li><a href="#"><img src="img/header_bell.png" alt="bell"></a></li>
+                        <li><a href="#"><img src="img/header_user.png" alt="user"></a></li>
+                        <li><a href="#" id="langToggle" data-lang="kr"><img src="img/header_lang.png" alt="language"
+                                    id="langImg"></a></li>
+                    </ul>
+                </div>
+            </div><!-- //.con_inner -->
+        </header><!-- //.header -->
+        <div class="main_visual">
+            <div class="con_inner">
+                <strong>Everything about hamsters,<br>
+                    in a place filled with love!</strong>
+                <h2>햄스터에 대한 모든 것, 사랑으로 가득찬 공간</h2>
+            </div>
+        </div><!-- //.main_visual -->
+        <!-- 증상입력 -->
+        <section class="search">
+            <div class="con_inner">
+                <div class="left_inner">
+                    <div class="left1">
+                        <input type="text" placeholder="무엇을 찾고 계신가요?">
+                        <button type="button"><img src="img/con1_search.png" alt="search"></button>
+                    </div>
+                    <div class="left2">
+                        <h4><a href="#">#쇼핑</a></h4>
+                        <h4><a href="#">#입양</a></h4>
+                        <h4><a href="#">#햄찌MBTI</a></h4>
+                        <h4><a href="#">#주인을 무는 이유</a></h4>
+                        <h4><a href="#">#자연주의 용품</a></h4>
+                        <h4><a href="#">#자연주의 사료</a></h4>
+                    </div>
+                </div>
+                <div class="right_inner">
+                    <h4 class="big_txt">자연 그대로의<br>건강한 한 입</h4>
+                </div>
+            </div><!-- //.con_inner -->
+        </section><!-- //증상입력 끝 -->
+        <section class="banner">
+            <div class="con_inner">
+                <h2>햄네이쳐가 만들어가는<span>자연과 햄스터의 공존</span></h2>
+                <h4>작은 친구들에게도 건강한 삶을!<br>화학 첨가물 없이, 자연 그대로의 사료와 용품만을 모았습니다.<br>안전하고 지속가능한 제품으로 햄스터와 지구를 지켜요!</h4>
+                <div class="more">
+                    <a href="#">
+                        <img src="img/more_w.png" alt="더보기">
+                    </a>
+                </div>
+            </div><!-- //.con_inner -->
+        </section><!-- //banner -->
+        <!-- 비디오 -->
+        <section class="video">
+            <div class="con_inner">
+                <div class="inner_top">
+                    <div class="main_txt_b">
+                        <p>Video</p>
+                        <a href="#">
+                            <img src="img/more_b.png" alt="더보기">
+                        </a>
+                    </div>
+                </div><!-- //.inner_top -->
+                <div class="inner_bottom">
+                    <a href="https://youtu.be/hgDv9dnnMUo?feature=shared" target="_blank">
+                        <img class="video1" src="img/con3_img1.png" alt="낙엽위에 있는 햄스터 ">
+                        <div class="play_button">
+                            <img src="./img/play.png" alt="재생버튼">
+                        </div>
+                    </a>
+                    <div class="container">
+                        <a href="https://youtu.be/reugwjL0YX8?feature=shared" target="_blank">
+                            <img class="video2" src="img/con3_img2.png" alt="땅굴에 있는 햄스터">
+                            <div class="play_button">
+                                <img src="./img/play.png" alt="재생버튼">
+                            </div>
+                        </a>
+                        <a href="https://youtu.be/gO5eKczrCUU?feature=shared" target="_blank">
+                            <img class="video3" src="img/con3_img3.png" alt="연못에서 물을 마시는 햄스터">
+                            <div class="play_button">
+                                <img src="./img/play.png" alt="재생버튼">
+                            </div>
+                        </a>
+                        <a href="https://youtu.be/TTDLja_tlUI?feature=shared" target="_blank">
+                            <img class="video4" src="img/con3_img4.png" alt="숲에서 얼굴을 내밀고 있는 햄스터">
+                            <div class="play_button">
+                                <img src="./img/play.png" alt="재생버튼">
+                            </div>
+                        </a>
+                        <a href="https://youtu.be/YQBHQiyyIkQ?feature=shared" target="_blank">
+                            <img class="video5" src="img/con3_img5.png" alt="숲에서 간식을 먹는 햄스터">
+                            <div class="play_button">
+                                <img src="./img/play.png" alt="재생버튼">
+                            </div>
+                        </a>
+                    </div><!-- //.container -->
+                </div><!-- //.inner_bottom -->
+            </div><!-- //.con_inner -->
+        </section><!-- //.비디오끝 -->
+        <!-- 케어 -->
+        <section class="care">
+            <div class="con_inner">
+                <div class="top_inner">
+                    <div class="ai">
+                        <p class="main_txt_w">Care with AI</p>
+                    </div><!-- //.ai -->
+                    <div class="good">
+                        <strong>상추</strong>
+                        <p>의 피부병에 좋은 천연 베딩을 추천해요!</p>
+                    </div><!-- //.good -->
+                </div><!-- //.top_inner -->
+                <div class="bottom_inner">
+                    <div class="left">
+                        <img class="best" src="./img/con4_best.png" alt="best">
+                        <h2>코튼베딩</h2>
+                        <h3>휴그로</h3>
+                    </div><!-- //.left -->
+                    <div class="right">
+                        <img class="arrow_left" src="img/con4_left.png" alt="arrow_left">
+                        <img class="bedding" src="./img/con4_img.png" alt="hugro_bedding">
+                        <img class="arrow_right" src="./img/con4_right.png" alt="arrow_right">
+                    </div><!-- //.right -->
+                </div><!-- //.bottom_inner -->
+            </div><!-- //.con_inner -->
+        </section><!-- //케어 -->
+        <!-- 커뮤니티 -->
+        <section class="community">
+            <div class="con_inner">
+                <div class="commu_top">
+                    <h2 class="main_txt_b">Community</h2>
+                    <img class="more" src="img/more_b.png" alt="more">
+                </div><!-- //.commu_top -->
+                <div class="commu_bottom">
+                    <div class="bottom_left">
+                        <div class="chat_box">
+                            <p>3개월차 햄스터 사료 질문</p>
+                            <div class="comment_info">
+                                <img class="chat_icon" src="./img/con5_chat.png" alt="chat">
+                                <strong class="comment">20</strong>
+                            </div><!-- //.comment_info -->
+                        </div><!-- //.chat_box -->
+                        <div class="chat_box">
+                            <p>3개월차 햄스터 사료 질문</p>
+                            <div class="comment_info">
+                                <img class="chat_icon" src="./img/con5_chat.png" alt="chat">
+                                <strong class="comment">20</strong>
+                            </div><!-- //.comment_info -->
+                        </div><!-- //.chat_box -->
+                        <div class="chat_box">
+                            <p>3개월차 햄스터 사료 질문</p>
+                            <div class="comment_info">
+                                <img class="chat_icon" src="./img/con5_chat.png" alt="chat">
+                                <strong class="comment">20</strong>
+                            </div><!-- //.comment_info -->
+                        </div><!-- //.chat_box -->
+                        <div class="chat_box">
+                            <p>3개월차 햄스터 사료 질문</p>
+                            <div class="comment_info">
+                                <img class="chat_icon" src="./img/con5_chat.png" alt="chat">
+                                <strong class="comment">20</strong>
+                            </div><!-- //.comment_info -->
+                        </div><!-- //.chat_box -->
+                    </div><!-- bottom_left -->
+                    <div class="bottom_right">
+                        <div class="chat_box">
+                            <p>3개월차 햄스터 사료 질문</p>
+                            <div class="comment_info">
+                                <img class="chat_icon" src="./img/con5_chat.png" alt="말풍선아이콘">
+                                <strong class="comment">20</strong>
+                            </div><!-- //.comment_info -->
+                        </div><!-- //.chat_box -->
+                        <div class="chat_box">
+                            <p>3개월차 햄스터 사료 질문</p>
+                            <div class="comment_info">
+                                <img class="chat_icon" src="./img/con5_chat.png" alt="말풍선아이콘">
+                                <strong class="comment">20</strong>
+                            </div><!-- //.comment_info -->
+                        </div><!-- //.chat_box -->
+                        <div class="chat_box">
+                            <p>3개월차 햄스터 사료 질문</p>
+                            <div class="comment_info">
+                                <img class="chat_icon" src="./img/con5_chat.png" alt="말풍선아이콘">
+                                <strong class="comment">20</strong>
+                            </div><!-- //.comment_info -->
+                        </div><!-- //.chat_box -->
+                        <div class="chat_box">
+                            <p>3개월차 햄스터 사료 질문</p>
+                            <div class="comment_info">
+                                <img class="chat_icon" src="./img/con5_chat.png" alt="말풍선아이콘">
+                                <strong class="comment">20</strong>
+                            </div><!-- //.comment_info -->
+                        </div><!-- //.chat_box -->
+                    </div><!-- //.bottom_right -->
+                </div><!-- //.commu_bottom -->
+            </div><!-- //.con_inner -->
+        </section><!-- //커뮤니티 끝 -->
+        <!-- 가이드 -->
+        <section class="guide">
+            <div class="con_inner">
+                <div class="guide_top">
+                    <h2 class="main_txt_b">Guide</h2>
+                    <img class="more" src="img/more_b.png" alt="더보기">
+                </div><!-- //.guide_top -->
+                <div class="guide_bottom">
+
+                    <a href="#">
+                        <div class="guide_item">
+                            <div class="guide_wrap">
+                                <img src="img/con6_img1.png" alt="팬더마우스">
+                                <p class="guide_txt">팬더마우스는 어떻게 키울까요?</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="guide_item">
+                            <div class="guide_wrap">
+                                <img src="img/con6_img2.png" alt="로보로브스키">
+                                <p class="guide_txt">로보로브스키도 합사하면 안되는이유</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="guide_item">
+                            <div class="guide_wrap">
+                                <img src="img/con6_img3.png" alt="산책하고있는 햄스터">
+                                <p class="guide_txt">햄스터 산책, 과연 괜찮을까요?</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- //.guide_bottom -->
+            </div><!-- //.con_inner -->
+        </section><!-- //가이드 끝 -->
+        <!--AI헬스체크 -->
+        <section class="health">
+            <div class="con_inner">
+                <div class="health_top">
+                    <h2 class="main_txt_b">AI health check</h2>
+                    <img class="more_b" src="img/more_b.png" alt="더보기">
+                </div>
+                <div class="health_content">
+                    <div class="left_inner">
+                        <div class="left1">
+                            <input type="text" placeholder="아이의 증상을 입력해보세요.">
+                            <button type="button">
+                                <img src="img/con1_search.png" alt="검색">
+                            </button>
+                        </div><!-- //.left1 -->
+                        <div class="left2">
+                            <h4><a href="#">#눈물자국</a></h4>
+                            <h4><a href="#">#구내염</a></h4>
+                            <h4><a href="#">#종양</a></h4>
+                            <h4><a href="#">#곰팡이</a></h4>
+                            <h4><a href="#">#털빠짐</a></h4>
+                            <h4><a href="#">#방광염</a></h4>
+                        </div>
+                        <div class="left_bottom">
+                            <h4 class="big_txt2">햄스터 진료<br>
+                                가능한 동물병원
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="right_inner">
+                        <div class="map">
+                            <img src="./img/con7_map.png" alt="지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section><!-- //AI헬스체크 끝 -->
+        <!-- 가족찾기 -->
+        <section class="family">
+            <div class="con_inner">
+                <div class="family_top">
+                    <h2 class="main_txt_b">Find a family</h2>
+                    <strong>유기햄스터들의 영원한 집을 찾습니다.</strong>
+                    <img class="more" src="img/more_b.png" alt="더보기">
+                </div><!-- //.family_top -->
+            </div><!-- //.con_inner -->
+
+            <!-- 스와이퍼 -->
+            <div class="swiper familySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/con8_img1.png" alt="유기햄스터 사진">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/con8_img2.png" alt="유기햄스터 사진">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/con8_img3.png" alt="유기햄스터 사진">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/con8_img4.png" alt="유기햄스터 사진">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/con8_img5.png" alt="유기햄스터 사진">
+                    </div>
+
+                </div><!-- //.swiper_wrapper -->
+        </section><!-- //가족찾기 끝 -->
+    </div><!-- //.wrap -->
+    <footer>
+        <div class="con_inner">
+            <div class="left">
+                <p>HAM NATURE</p>
+                <p>서비스 약관 l 환불 정책 l 개인정보처리방침</p>
+                <p>햄네이쳐 주시회사 l 사업자 등록번호 : 123-45-67890</p>
+                <p>통신판매업신고번호 : 2024-서울중구-1000 l 대표 전지후</p>
+                <p>주소 : 서울 중구 명동길11 3F 햄네이쳐</p>
+                <p>이메일 : hamnature@hamnature.io</p>
+                <p>고객센터 : 1544-1004 l 평일 09:00-18:00(점심 12:00-13:00)</p>
+            </div><!-- //.left -->
+            <div class="right">
+                <p>© HAM NATURE All Rights Reserved</p>
+            </div><!-- //.right -->
+        </div><!-- //.con_inner -->
+    </footer>
+
+    <script>
+        // Swiper 초기화
+        document.addEventListener('DOMContentLoaded', function () {
+            var familySwiper = new Swiper(".familySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                // 반응형 설정
+                breakpoints: {
+                    // 768px 이상일 때
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    // 1024px 이상일 때
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    }
+                }
+            });
+        });
+    </script>    
+</body>
+
+</html>
