@@ -11,11 +11,11 @@
   --white-color: #fff;
   --pd-tb0-lr48: 0 48px;
   --pd-tit: 200px 0 80px 200px;
-  --main-color: #A8996E;
-  --main-color-deep: #A8996E;
+  --main-color: #a8996e;
+  --main-color-deep: #a8996e;
   --sub-color1: #9ac8cd;
   --sub-color2: #e1f7f5;
-  --color-rgba: #A7A9AC;
+  --color-rgba: #a7a9ac;
 }
 
 body {
@@ -27,6 +27,46 @@ body {
 
 .wrap {
   height: 100%;
+}
+
+/* 마우스효과 */
+.cursor,
+.cursor2,
+.cursor3 {
+  position: fixed;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  left: -100px;
+  top: 50%;
+  z-index: 9999;
+}
+.cursor {
+  background-color: #fff;
+  height: 0;
+  width: 0;
+}
+.cursor2,
+.cursor3 {
+  height: 36px;
+  width: 36px;
+  transition: all 0.3s ease-out;
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
+}
+.cursor2.hover,
+.cursor3.hover {
+  transform: scale(2) translateX(-25%) translateY(-25%);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  border: none;
+}
+@media screen and (max-width: 1200px) {
+  .cursor,
+  .cursor2,
+  .cursor3 {
+    display: none;
+  }
 }
 
 header {
@@ -165,6 +205,10 @@ ul.gnb > li > ul li:hover {
 
 ul.gnb > li > ul li a {
   display: block;
+}
+
+.swiper-slide .tit h2 {
+  font-size: 10px;
 }
 
 .sel {
@@ -550,7 +594,7 @@ section.txt_area h2 .tit {
   text-align: center;
   left: 0;
   top: 0;
-  background: var(--main-color);
+  /*   background: var(--main-color); */
   color: var(--white-color);
   cursor: default;
   backface-visibility: hidden;
@@ -598,17 +642,17 @@ section.txt_area h2 .tit {
 
 .sticky_con ul li:nth-child(1) .icon {
   background-image: url(../img/icon1.png);
-  background-color: rgba(156, 163, 15, 0.831);
+/*   background-color: rgba(156, 163, 15, 0.831); */
 }
 
 .sticky_con ul li:nth-child(2) .icon {
   background-image: url(../img/icon2.png);
-  background-color: rgba(15, 163, 153, 0.485);
+/*   background-color: rgba(15, 163, 153, 0.485); */
 }
 
 .sticky_con ul li:nth-child(3) .icon {
   background-image: url(../img/icon3.png);
-  background-color: rgba(123, 15, 163, 0.712);
+/*   background-color: rgba(123, 15, 163, 0.712); */
 }
 
 .sticky_con ul li h3 {
@@ -865,17 +909,17 @@ section.txt_area h2 .tit {
 }
 
 .trust ul li.sl1 {
-  background-image: url(../img/sl1.png);
+  background-image: url(../img/m_1.jpg);
   top: 0;
 }
 
 .trust ul li.sl2 {
-  background-image: url(../img/sl2.png);
+  background-image: url(../img/m_2.jpg);
   top: 20vh;
 }
 
 .trust ul li.sl3 {
-  background-image: url(../img/sl3.png);
+  background-image: url(../img/m_2.jpg);
   top: 40vh;
 }
 
