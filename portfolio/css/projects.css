@@ -116,6 +116,12 @@ h1 {
 }
 
 .item:hover .date {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.item:hover .date {
   -webkit-transform: translate3d(0, 61px, 0);
   -ms-transform: translate3d(0, 61px, 0);
   -o-transform: translate3d(0, 61px, 0);
@@ -207,7 +213,7 @@ figcaption span {
 }
 
 figcaption a {
-  color: #cc320f;
+  color: black;
 }
 
 .date {

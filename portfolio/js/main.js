@@ -316,68 +316,94 @@ $(function () {
   setupMouseFollowEffect("#skills_2");
 
   //히스토리
-  $.fn.timeline = function (scrollContainer = $(window)) {
-    const selectors = {
-      id: $(this),
-      item: $(this).find(".timeline-item"),
-      activeClass: "timeline-item--active",
-      img: ".timeline__img",
-    };
+  var $element = $(".each-event, .title");
+  var $window = $(window);
+  $window.on("scroll resize", check_for_fade);
+  $window.trigger("scroll");
+  function check_for_fade() {
+    var window_height = $window.height();
 
-    selectors.item.eq(0).addClass(selectors.activeClass);
-    selectors.id.css(
-      "background-image",
-      "url(" + selectors.item.first().find(selectors.img).attr("src") + ")"
-    );
-
-    const itemLength = selectors.item.length;
-
-    scrollContainer.on("scroll", function () {
-      let max, min;
-      let pos = scrollContainer.scrollTop();
-
-      selectors.item.each(function (i) {
-        min = $(this).position().top; // position 기준 변경
-        max = $(this).outerHeight() + min;
-
-        if (i == itemLength - 2 && pos > min + $(this).outerHeight() / 2) {
-          selectors.item.removeClass(selectors.activeClass);
-          selectors.id.css(
-            "background-image",
-            "url(" + selectors.item.last().find(selectors.img).attr("src") + ")"
-          );
-          selectors.item.last().addClass(selectors.activeClass);
-        } else if (pos <= max - 40 && pos >= min) {
-          selectors.id.css(
-            "background-image",
-            "url(" + $(this).find(selectors.img).attr("src") + ")"
-          );
-          selectors.item.removeClass(selectors.activeClass);
-          $(this).addClass(selectors.activeClass);
-        }
-      });
+    $.each($element, function (event) {
+      var $element = $(this);
+      var element_height = $element.outerHeight();
+      var element_offset = $element.offset().top;
+      space =
+        window_height -
+        (element_height + element_offset - $(window).scrollTop());
+      if (space < 60) {
+        $element.addClass("non-focus");
+      } else {
+        $element.removeClass("non-focus");
+      }
     });
-  };
-  $("#timeline-1").timeline($("#timeline-1"));
+  }
 
   // historyCard 클릭 시 #history 팝업 활성화
-  $("#historyCard").on("click", function () {
-    $("#history").addClass("active");
-    $("body").addClass("noscroll");
-  });
+  $("#historyCard .Picture-img, #historyCard .Picture-note span").on(
+    "click",
+    function () {
+      $("#history").addClass("active");
+      $("body").addClass("noscroll");
 
-  // 공통 팝업 닫기 버튼
+      // 타임라인 이벤트들이 순차적으로 나타나는 애니메이션
+      setTimeout(function () {
+        $(".each-event").each(function (index) {
+          setTimeout(() => {
+            $(this).addClass("show");
+          }, 300 * index);
+        });
+      }, 500);
+    }
+  );
+
+  // 히스토리 타임라인 스크롤 효과
+  $("#history").on("scroll", function () {
+    var scrollTop = $(this).scrollTop();
+    var windowHeight = $(this).height();
+
+    $(".each-year").each(function () {
+      var $year = $(this);
+      var yearTop = $year.position().top; // ← 이거 중요!!
+      var yearHeight = $year.outerHeight();
+
+      if (
+        yearTop < windowHeight / 2 &&
+        yearTop + yearHeight > windowHeight / 2
+      ) {
+        $year.find(".title").removeClass("non-focus");
+        $year.find(".each-event").removeClass("non-focus");
+      } else {
+        $year.find(".title").addClass("non-focus");
+        $year.find(".each-event").addClass("non-focus");
+      }
+    });
+  });
+  setTimeout(function () {
+    $(".each-event").each(function (index) {
+      setTimeout(() => {
+        $(this).addClass("show");
+      }, 300 * index);
+    });
+  }, 500);
+
+  // 팝업 닫기 버튼
   $(document).on("click", ".popup_close_btn", function (e) {
     e.stopPropagation();
     $(this).closest("#aboutme_me, #school, #history").removeClass("active");
     $("body").removeClass("noscroll");
+
+    // 타임라인 이벤트 초기화
+    $(".each-event").removeClass("show");
   });
 
-  // 바깥 클릭 시 닫기
+  // 배경 클릭 시 팝업 닫기
   $("#history").on("click", function (e) {
     if ($(e.target).is("#history")) {
       $(this).removeClass("active");
       $("body").removeClass("noscroll");
+
+      // 타임라인 이벤트 초기화
+      $(".each-event").removeClass("show");
     }
   });
 }); //ready end
