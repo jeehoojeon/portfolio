@@ -80,45 +80,77 @@ $(function () {
 
   // ========== 폴라로이드 드래그 효과 ==========
   const pictures = document.querySelectorAll(".Picture");
-  let previousTouch;
-  /* 
-   function updateElementPosition(element, event) {
-    let movementX, movementY;
+  /*   let previousTouch; */
+  pictures.forEach((picture) => {
+    let isDragging = false;
+    let startX, startY, origX, origY;
 
-    if (event.type === "touchmove") {
-      const touch = event.touches[0];
-      movementX = previousTouch ? touch.clientX - previousTouch.clientX : 0;
-      movementY = previousTouch ? touch.clientY - previousTouch.clientY : 0;
-      previousTouch = touch;
-    } else {
-      movementX = event.movementX;
-      movementY = event.movementY;
+    picture.addEventListener("mousedown", startDrag);
+    picture.addEventListener("touchstart", startDrag, { passive: false });
+
+    function startDrag(e) {
+      e.preventDefault();
+      isDragging = true;
+
+      // 드래그 시작할 때 현재 위치 저장
+      if (e.type === "touchstart") {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+      } else {
+        startX = e.clientX;
+        startY = e.clientY;
+      }
+      origX = parseInt(picture.style.left) || 0;
+      origY = parseInt(picture.style.top) || 0;
+
+      // 드래그하는 폴라로이드 제일 위로 올리기
+      picture.style.zIndex = getMaxZIndex() + 1;
+
+      document.addEventListener("mousemove", onDrag);
+      document.addEventListener("mouseup", endDrag);
+      document.addEventListener("touchmove", onDrag, { passive: false });
+      document.addEventListener("touchend", endDrag);
     }
 
-    const elementY = parseInt(element.style.top || 0) + movementY;
-    const elementX = parseInt(element.style.left || 0) + movementX;
+    function onDrag(e) {
+      if (!isDragging) return;
 
-    element.style.top = `${elementY}px`;
-    element.style.left = `${elementX}px`;
+      let clientX, clientY;
+      if (e.type === "touchmove") {
+        clientX = e.touches[0].clientX;
+        clientY = e.touches[0].clientY;
+      } else {
+        clientX = e.clientX;
+        clientY = e.clientY;
+      }
+
+      const dx = clientX - startX;
+      const dy = clientY - startY;
+
+      picture.style.left = origX + dx + "px";
+      picture.style.top = origY + dy + "px";
+    }
+
+    function endDrag() {
+      isDragging = false;
+      document.removeEventListener("mousemove", onDrag);
+      document.removeEventListener("mouseup", endDrag);
+      document.removeEventListener("touchmove", onDrag);
+      document.removeEventListener("touchend", endDrag);
+    }
+  });
+
+  // 현재 화면에 있는 모든 .Picture 중 가장 높은 z-index 계산
+  function getMaxZIndex() {
+    let max = 0;
+    document.querySelectorAll(".Picture").forEach((el) => {
+      const z = parseInt(window.getComputedStyle(el).zIndex) || 0;
+      if (z > max) {
+        max = z;
+      }
+    });
+    return max;
   }
-
-   function startDrag(element, event) {
-    const updateFunction = (event) => updateElementPosition(element, event);
-    const stopFunction = () =>
-      stopDrag({ update: updateFunction, stop: stopFunction });
-    document.addEventListener("mousemove", updateFunction);
-    document.addEventListener("touchmove", updateFunction);
-    document.addEventListener("mouseup", stopFunction);
-    document.addEventListener("touchend", stopFunction);
-  }
-
-  function stopDrag({ update, stop }) {
-    previousTouch = undefined;
-    document.removeEventListener("mousemove", update);
-    document.removeEventListener("touchmove", update);
-    document.removeEventListener("mouseup", stop);
-    document.removeEventListener("touchend", stop);
-  } */
 
   pictures.forEach((picture) => {
     const range = 100;
